@@ -1,6 +1,11 @@
 package io.devotel.userservice.config;
 
 
+/*
+ * Author: Behrouz Atoofi.
+ * Created on: 27/07/2025 A
+ */
+
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -13,18 +18,14 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
-/*
- * Author: Behrouz Atoofi.
- * Created on: 25/07/2025 A
- */
 @Configuration
 @EnableWs
-public class SoapConfig extends WsConfigurerAdapter {
+public class WebServiceConfig extends WsConfigurerAdapter {
 
     @Bean
-    public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext context) {
+    public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext ctx) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
-        servlet.setApplicationContext(context);
+        servlet.setApplicationContext(ctx);
         servlet.setTransformWsdlLocations(true);
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
