@@ -3,7 +3,7 @@
            xmlns:tns="http://devotel.io/user-service"
            targetNamespace="http://devotel.io/user-service"
            elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://devotel.io/userservice ">
+           xsi:schemaLocation="http://devotel.io/user-service ">
 
     <xs:element name="GetUserByIdRequest">
         <xs:complexType>

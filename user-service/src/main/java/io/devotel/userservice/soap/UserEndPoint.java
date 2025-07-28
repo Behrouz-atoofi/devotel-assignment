@@ -26,7 +26,7 @@ public class UserEndPoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getUserRequest")
     @ResponsePayload
-    public GetUserByIdResponse getCountry(@RequestPayload GetUserByIdRequest request) {
+    public GetUserByIdResponse getUserByIdResponse(@RequestPayload GetUserByIdRequest request) {
         GetUserByIdResponse response = new GetUserByIdResponse();
         response.setUser(userMapper.userToUserDTO(userRepository.findById(request.getId())));
 
