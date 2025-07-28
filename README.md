@@ -32,7 +32,7 @@ You can also use the built-in H2 web console to view the data if needed.
 
 You can run each service individually using Maven.
 
-### Run `user-service`:
+### Run `services`:
 
 ```bash
 cd user-service
@@ -40,10 +40,6 @@ mvn spring-boot:run
 
 Runs at: http://localhost:9001
 
-
-### Run `profile-service`:
-
-```bash
 cd profile-service
 mvn spring-boot:run
 
