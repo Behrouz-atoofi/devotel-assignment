@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "0df5bcc2-1fe2-43eb-895b-d6978b268ed0",
+		"name": "devotel Assigment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19819276",
+		"_collection_link": "https://digex1.postman.co/workspace/devotel.io~b48df9f0-3bf8-45c0-9d2c-36a862aca91d/collection/19819276-0df5bcc2-1fe2-43eb-895b-d6978b268ed0?action=share&source=collection_link&creator=19819276"
+	},
+	"item": [
+		{
+			"name": "CreateProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name \" : \"Behrouz\",\n    \"age\" : 32 ,\n    \"location\" : \"tehran\" , \n    \"email\" : \"mr.atoufi@gmail.com\" ,\n    \"bio\" : \"Java developer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/profiles",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"profiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllprofiles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Behrouz\",\n    \"email\" : \"mr.atoufi@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/profiles",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"profiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProfileById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Behrouz\",\n    \"email\" : \"mr.atoufi@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/profiles/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"profiles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9001/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9001/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Behrouz\",\n    \"email\" : \"mr.atoufi@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9001/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
