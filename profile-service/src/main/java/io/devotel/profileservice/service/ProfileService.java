@@ -4,6 +4,7 @@ package io.devotel.profileservice.service;
 import io.devotel.profileservice.dto.profile.CreateProfileDto;
 import io.devotel.profileservice.dto.profile.ProfileDto;
 import io.devotel.profileservice.exception.ProfileExistsException;
+import io.devotel.profileservice.exception.ProfileNotFoundException;
 import io.devotel.profileservice.exception.UserNotFoundException;
 import io.devotel.profileservice.mapper.ProfileMapper;
 import io.devotel.profileservice.model.Profile;
@@ -14,7 +15,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /*
  * Author: Behrouz Atoofi.
@@ -34,6 +37,14 @@ public class ProfileService {
 
         Profile profile = profileRepository.findById(id).orElseThrow(ProfileNotFoundException::new);
         return profileMapper.toDto(profile);
+    }
+
+    public List<ProfileDto> getAllProfiles() {
+        log.info("Get all profiles");
+
+        List<Profile> profiles = profileRepository.findAll();
+
+        return profiles.stream().map(profileMapper::toDto).collect(Collectors.toList());
     }
 
     public ProfileDto createProfile(CreateProfileDto createProfileDto) {

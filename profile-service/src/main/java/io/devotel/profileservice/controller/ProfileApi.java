@@ -17,6 +17,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequiredArgsConstructor
@@ -45,5 +47,14 @@ public class ProfileApi {
 
         return ResponseEntity.ok().body(profileService.getProfile(id));
     }
+
+    @Operation(summary = "دریافت همه پروفایلها", description = "این سرویس همه پروفایلها را برمیگرداند")
+    @GetMapping()
+    public ResponseEntity<List<ProfileDto>> getAllProfiles() {
+        log.info("Getting all profiles");
+
+        return ResponseEntity.ok().body(profileService.getAllProfiles());
+    }
+
 
 }

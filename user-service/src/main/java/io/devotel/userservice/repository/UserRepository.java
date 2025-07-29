@@ -12,24 +12,16 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
 
-    @PostConstruct
-    default void initData() {
-        User user = new User();
-        user.setId(1L);
-        user.setName("Behrouz");
-        user.setEmail("mr.atoufi@@gmail.com");
-
-        UserRepository.this.save(user);
-    }
-
-
     List<User> findAll();
 
     User findById(long id);
+
+    Optional<User> findByEmail(String email);
 
 
 }
