@@ -24,7 +24,7 @@ public class UserEndPoint {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getUserRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "GetUserByIdRequest")
     @ResponsePayload
     public GetUserByIdResponse getUserByIdResponse(@RequestPayload GetUserByIdRequest request) {
         GetUserByIdResponse response = new GetUserByIdResponse();

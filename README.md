@@ -53,3 +53,6 @@ mvn clean package
 
 cd ../profile-service
 mvn clean package
+
+
+

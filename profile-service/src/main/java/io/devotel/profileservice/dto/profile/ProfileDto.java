@@ -6,7 +6,6 @@ package io.devotel.profileservice.dto.profile;
  * Created on: 25/07/2025 A
  */
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,6 +15,13 @@ import lombok.ToString;
 @ToString
 public class ProfileDto {
 
-    @Schema(description = "شناسه پروفایل", example = "1")
     private Long id;
+    private String name;
+    private String email;
+    private String bio;
+    private String location;
+    private int age;
+
+    private Long userId;
+
 }

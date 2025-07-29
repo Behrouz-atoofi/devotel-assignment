@@ -1,9 +1,7 @@
 package io.devotel.profileservice.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -17,7 +15,9 @@ import java.util.Objects;
  * Created on: 25/07/2025 A
  */
 @Entity
-@Table(name = "t_profile")
+@Table(name = "t_profile", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "user_id")
+})
 @Getter
 @Setter
 @ToString
@@ -25,13 +25,17 @@ import java.util.Objects;
 public class Profile {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
-    private String email;
     private String bio;
     private String location;
     private int age;
+
+    // for recognizing user existence in user-service
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
 
     @Override
     public final boolean equals(Object o) {

@@ -13,10 +13,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class CreateProfileDto extends ProfileDto {
+public class CreateProfileDto {
 
-    @Schema(description = "نام کاربر", example = "behrouz Atoofi")
-    private String name;
     @Schema(description = "ایمیل کاربر", example = "mr.atoufi@gmail.com")
     private String email;
     @Schema(description = "درباره کاربر", example = "senior Java developer")
@@ -25,5 +23,8 @@ public class CreateProfileDto extends ProfileDto {
     private String location;
     @Schema(description = "سن کاربر", example = "32")
     private int age;
+    @Schema(description = "شناسه کاربری", example = "1L")
+    // client first register a user in userService and then with UserId sends a request to profile-service
+    private Long userId ;
 
 }
