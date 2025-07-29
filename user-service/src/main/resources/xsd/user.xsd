@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:tns="http://devotel.io/user-service"
-           targetNamespace="http://devotel.io/user-service"
-           elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           targetNamespace="http://devotel.io/user-service" elementFormDefault="qualified"
            xsi:schemaLocation="http://devotel.io/user-service ">
 
     <xs:element name="GetUserByIdRequest">

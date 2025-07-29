@@ -3,10 +3,7 @@ package io.devotel.profileservice.mapper;
 import io.devotel.profileservice.dto.profile.CreateProfileDto;
 import io.devotel.profileservice.dto.profile.ProfileDto;
 import io.devotel.profileservice.model.Profile;
-import io.devotel.user_service.GetUserByIdResponse;
-import io.devotel.userservice.model.User;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 
 /*
@@ -21,5 +18,5 @@ public interface ProfileMapper {
 
     Profile toEntity(ProfileDto dto);
 
-    Profile fromCreateProfileDto(CreateProfileDto createProfileDto );
+    Profile fromCreateProfileDto(CreateProfileDto createProfileDto);
 }

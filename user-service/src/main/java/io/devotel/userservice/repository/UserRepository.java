@@ -17,7 +17,7 @@ import java.util.List;
 public interface UserRepository extends CrudRepository<User, Long> {
 
     @PostConstruct
-     default void initData() {
+    default void initData() {
         User user = new User();
         user.setId(1L);
         user.setName("Behrouz");

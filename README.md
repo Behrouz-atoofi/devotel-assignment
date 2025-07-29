@@ -1,4 +1,4 @@
-# Microservices Project: User & Profile Services 
+# Microservices Project: User & Profile Services
 
 This project contains two Spring Boot microservices:
 

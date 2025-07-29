@@ -25,6 +25,6 @@ public class CreateProfileDto {
     private int age;
     @Schema(description = "شناسه کاربری", example = "1L")
     // client first register a user in userService and then with UserId sends a request to profile-service
-    private Long userId ;
+    private Long userId;
 
 }

@@ -8,15 +8,11 @@ package io.devotel.profileservice;
 
 import io.devotel.profileservice.config.UserClientConfig;
 import io.devotel.profileservice.service.client.UserClient;
-import io.devotel.user_service.GetUserByIdResponse;
 import lombok.RequiredArgsConstructor;
-import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = UserClientConfig.class, loader = AnnotationConfigContextLoader.class)
