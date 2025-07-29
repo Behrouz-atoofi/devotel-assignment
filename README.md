@@ -5,6 +5,8 @@ This project contains two Spring Boot microservices:
 - `user-service` running on port `9001`
 - `profile-service` running on port `9000`
 
+postman collection for 2 services, attached in root directory (devotel Assigment.postman_collection.json)
+
 Each service runs independently and can communicate with others via REST if needed.
 
 ---
@@ -30,6 +32,14 @@ You can also use the built-in H2 web console to view the data if needed.
 
 ## Running the Services
 
+
+After running the projects , swagger links will be accessed : 
+
+localhost:9001/swagger-ui/index.html (profile-ervice)
+
+localhost:9000/swagger-ui/index.html (user-service)
+
+
 You can run each service individually using Maven.
 
 ### Run `services`:
@@ -53,6 +63,8 @@ mvn clean package
 
 cd ../profile-service
 mvn clean package
+
+
 
 
 
